@@ -1,6 +1,7 @@
 ## Lobstack
 
-**Every call comes back with a receipt.**
+**One OpenAI-compatible key. Every model. A receipt on every call. An agent that
+waits for you before it changes anything.**
 
 Lobstack is a metered gateway for model calls. One key reaches 26 models across
 9 providers — Anthropic, OpenAI, Google, xAI, DeepSeek, Mistral, Groq, Qwen and
@@ -103,18 +104,22 @@ for Claude Desktop, Claude Code, Cursor, Zed or anything else that speaks the
 protocol over stdio. Four tools: `lobstack_route_preview`, `lobstack_models`,
 `lobstack_chat` and `lobstack_spend`. Route preview needs no credential at all,
 so an agent can ask where a prompt would go and what it would cost before you
-have an account. npm package `@lobstack/mcp`.
+have an account. npm package `@lobstack-ai/mcp`.
 
 **[lobstack-gateway](https://github.com/Lobstack-ai/lobstack-gateway)** — a
 typed SDK and, more usefully, the published contract it speaks: `spec/openapi.yaml`
 for the endpoints, their headers and their error classes, and
 `spec/x_lobstack.schema.json` for the receipt itself. A receipt nobody can
 validate is a quirk; a receipt with a schema is a contract. npm package
-`@lobstack/gateway`.
+`@lobstack-ai/gateway`.
 
-**None of the three are on npm yet.** The packages are built, tested and
-versioned at `0.1.0`, and publishing is still to come — `npm install` will not
-find them today. Clone the repositories in the meantime.
+**All three are on npm.** `lobstack` is at `0.1.1`, `@lobstack-ai/mcp` and
+`@lobstack-ai/gateway` at `0.1.0`. The CLI skips `0.1.0` because that version was
+published and unpublished on 2026-09-11 and npm keeps a permanent tombstone for
+an unpublished version, so `0.1.1` is the lowest number that can exist under the
+name. The site reads the registry state out of one module rather than asserting
+it here, and says which day it was last checked:
+[lobstack.ai/docs/cli](https://www.lobstack.ai/docs/cli).
 
 ---
 
@@ -198,8 +203,9 @@ itself in its own matrix always wins and everyone reading knows it.
 [News](https://www.lobstack.ai/news) ·
 [About](https://www.lobstack.ai/about)
 
-The connector catalogue on the site lists 137 entries — 116 credentialed
-third-party integrations and 21 AI-native ones.
+The connector catalogue is Lob Bot's, and it is on the site rather than in this
+file, because a count typed into a README is a count that goes stale silently:
+[lobstack.ai/connectors](https://www.lobstack.ai/connectors).
 
 ---
 
