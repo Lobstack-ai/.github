@@ -10,8 +10,9 @@
 
 One key reaches **26 models across 9 providers** — Anthropic, OpenAI, Google, xAI,
 DeepSeek, Mistral, Groq, Qwen and Moonshot — through an OpenAI-compatible endpoint.
-Name a model and you get it. Ask for `auto` and the request is scored for complexity
-and served by the cheapest model that can answer it, never above your plan's ceiling.
+Name a model and you get it. Ask for `auto` and **Nex 1** scores the request and
+serves it from the cheapest tier that can answer, never above your plan's ceiling.
+[Every model, with its rate →](https://www.lobstack.ai/models)
 
 <br>
 
@@ -45,14 +46,14 @@ and served by the cheapest model that can answer it, never above your plan's cei
 <tr>
 <td width="50%" valign="top">
 <a href="https://www.lobstack.ai/lob-bot"><img src="https://raw.githubusercontent.com/Lobstack-ai/.github/main/profile/assets/lobbot.jpg" alt="Lob Bot pausing at an approval before writing a file" width="100%"></a>
-<h3>Lob Bot &nbsp;<sub><code>PRERELEASE</code></sub></h3>
-<p>Agents on your own machine, with a gate before anything changes. A Slack-shaped desktop app where bots hold channels, talk to each other, and stop at an approval before they touch a file.</p>
-<a href="https://www.lobstack.ai/lob-bot"><b>Explore Lob Bot →</b></a>
+<h3>Lob Bot &nbsp;<sub><code>v0.4.0</code></sub></h3>
+<p>Agents on your own machine, with a gate before anything changes. A Slack-shaped desktop app where bots hold channels, talk to each other, and stop at an approval before they touch a file. Windows, macOS and Linux — and it updates itself.</p>
+<a href="https://www.lobstack.ai/lob-bot"><b>Download Lob Bot →</b></a>
 </td>
 <td width="50%" valign="top">
 <a href="https://www.lobstack.ai/nex"><img src="https://raw.githubusercontent.com/Lobstack-ai/.github/main/profile/assets/nex.png" alt="A request being routed to one of several models" width="100%"></a>
-<h3>Nex &nbsp;<sub><code>IN TRAINING</code></sub></h3>
-<p>Our own model, learning where every request is worth sending. Its first shipped piece is the learned router — a classifier trained on what the Gateway already records about model choice.</p>
+<h3>Nex &nbsp;<sub><code>NEX 1 LIVE</code></sub></h3>
+<p>Our own model, learning where every request is worth sending. <b>Nex 1</b> is the piece that ships: send <code>auto</code> and it picks the tier, today, on every plan. The model it is named for is still in training, and this page says which is which rather than letting one borrow the other's credibility.</p>
 <a href="https://www.lobstack.ai/nex"><b>Read the plan →</b></a>
 </td>
 </tr>
