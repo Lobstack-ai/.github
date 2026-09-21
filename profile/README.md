@@ -46,7 +46,7 @@ serves it from the cheapest tier that can answer, never above your plan's ceilin
 <tr>
 <td width="50%" valign="top">
 <a href="https://www.lobstack.ai/lob-bot"><img src="https://raw.githubusercontent.com/Lobstack-ai/.github/main/profile/assets/lobbot.jpg" alt="Lob Bot pausing at an approval before writing a file" width="100%"></a>
-<h3>Lob Bot &nbsp;<sub><code>v0.4.0</code></sub></h3>
+<h3>Lob Bot &nbsp;<sub><code>v0.4.1</code></sub></h3>
 <p>Agents on your own machine, with a gate before anything changes. A Slack-shaped desktop app where bots hold channels, talk to each other, and stop at an approval before they touch a file. Windows, macOS and Linux — and it updates itself.</p>
 <a href="https://www.lobstack.ai/lob-bot"><b>Download Lob Bot →</b></a>
 </td>
