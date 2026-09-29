@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Documentation
+    url: https://www.lobstack.ai/docs
+    about: How the app, the API and the Console work.
+  - name: Service status
+    url: https://www.lobstack.ai/status
+    about: Check here first if the API seems down.

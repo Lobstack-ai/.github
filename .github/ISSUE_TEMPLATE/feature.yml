@@ -1,0 +1,46 @@
+name: Feature
+description: Something new, or a change to how something works.
+title: "Feature: "
+type: Feature
+labels: ["enhancement"]
+body:
+  - type: dropdown
+    id: product
+    attributes:
+      label: Where
+      options:
+        - Lobstack app
+        - Lobstack API
+        - Console
+        - Website
+        - npm package (gateway SDK, CLI, MCP)
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: Who is stuck, and on what? Start from the person, not the solution.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What we should build
+      description: The smallest version that solves it.
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Done when
+      description: How we'll know it works. A short checklist is best.
+      placeholder: |
+        - [ ]
+        - [ ]
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Links, designs, related tickets, anything out of scope.

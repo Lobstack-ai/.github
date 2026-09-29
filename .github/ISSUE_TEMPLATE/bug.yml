@@ -1,0 +1,52 @@
+name: Bug
+description: Something is broken or behaves differently from how it should.
+title: "Bug: "
+type: Bug
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: product
+    attributes:
+      label: Where
+      options:
+        - Lobstack app
+        - Lobstack API
+        - Console
+        - Website
+        - npm package (gateway SDK, CLI, MCP)
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: One or two sentences. Screenshots welcome.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What should have happened
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+  - type: input
+    id: version
+    attributes:
+      label: Version and OS
+      description: For the app, Settings › Updates shows the version. For the API, the request id from the receipt helps most.
+      placeholder: "0.9.1 on Windows 11"
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or error text
+      description: Paste as text. Remove API keys, tokens and emails first.
+      render: text
