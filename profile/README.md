@@ -1,22 +1,20 @@
 <div align="center">
 
-<a href="https://www.lobstack.ai">
-  <img src="https://raw.githubusercontent.com/Lobstack-ai/.github/main/profile/assets/hero.png" alt="Lobstack — Building the agentic stack" width="900">
+<a href="https://www.lobstack.ai/download">
+  <img src="https://raw.githubusercontent.com/Lobstack-ai/.github/main/profile/assets/lobstack.jpg" alt="Lobstack: Asks before it acts. An AI team on your computer, free for Windows, Mac and Linux. Beside it, the Lobstack app holding a file change for approval." width="900">
 </a>
 
 <br>
 
-### One OpenAI-compatible key. Every model.<br>A receipt on every call.
+### An AI team that asks before it acts.
 
-One key reaches **26 models across 9 providers** — Anthropic, OpenAI, Google, xAI,
-DeepSeek, Mistral, Groq, Qwen and Moonshot — through an OpenAI-compatible endpoint.
-Name a model and you get it. Ask for `auto` and **Nex 1** scores the request and
-serves it from the cheapest tier that can answer, never above your plan's ceiling.
-[Every model, with its rate →](https://www.lobstack.ai/models)
+Lobstack runs bots on your computer. They work in your repos and tools, and they
+wait for your yes before anything that changes something.
+The Lobstack API behind it puts a receipt on every call.
 
 <br>
 
-[**Start free**](https://www.lobstack.ai/signup) · [Docs](https://www.lobstack.ai/docs) · [Pricing](https://www.lobstack.ai/pricing) · [Status](https://www.lobstack.ai/status) · [Compare](https://www.lobstack.ai/compare)
+[**Download the app**](https://www.lobstack.ai/download) · [The API](https://www.lobstack.ai/api-platform) · [Docs](https://www.lobstack.ai/docs) · [Pricing](https://www.lobstack.ai/pricing)
 
 </div>
 
@@ -26,50 +24,46 @@ serves it from the cheapest tier that can answer, never above your plan's ceilin
 
 <br>
 
-<div align="center"><h2>The products</h2></div>
+## The Lobstack app
 
-<table>
-<tr>
-<td width="50%" valign="top">
-<a href="https://www.lobstack.ai/gateway"><img src="https://raw.githubusercontent.com/Lobstack-ai/.github/main/profile/assets/gateway.jpg" alt="The Gateway scoring a request and choosing a tier" width="100%"></a>
-<h3>Gateway</h3>
-<p>One endpoint, every model, a receipt on every call. <code>POST</code> to <code>/api/gateway/v1/chat/completions</code> with the OpenAI SDK you already have — change the base URL and the key, change nothing else.</p>
-<a href="https://www.lobstack.ai/gateway"><b>Explore Gateway →</b></a>
-</td>
-<td width="50%" valign="top">
-<a href="https://www.lobstack.ai/console"><img src="https://raw.githubusercontent.com/Lobstack-ai/.github/main/profile/assets/console.jpg" alt="The Console showing requests, tokens and spend" width="100%"></a>
-<h3>Console</h3>
-<p>Watch what ran, what it cost, and what it would have cost. Every call that reached the API, true p50/p95/p99, a failure taxonomy that says whose problem it is, and spend priced when it was spent.</p>
-<a href="https://www.lobstack.ai/console"><b>Explore Console →</b></a>
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-<a href="https://www.lobstack.ai/lob-bot"><img src="https://raw.githubusercontent.com/Lobstack-ai/.github/main/profile/assets/lobbot.jpg" alt="Lob Bot pausing at an approval before writing a file" width="100%"></a>
-<h3>Lob Bot &nbsp;<sub><code>v0.4.2</code></sub></h3>
-<p>Agents on your own machine, with a gate before anything changes. A Slack-shaped desktop app where bots hold channels, talk to each other, and stop at an approval before they touch a file. Windows, macOS and Linux — and it updates itself.</p>
-<a href="https://www.lobstack.ai/lob-bot"><b>Download Lob Bot →</b></a>
-</td>
-<td width="50%" valign="top">
-<a href="https://www.lobstack.ai/nex"><img src="https://raw.githubusercontent.com/Lobstack-ai/.github/main/profile/assets/nex.png" alt="A request being routed to one of several models" width="100%"></a>
-<h3>Nex &nbsp;<sub><code>NEX 1 LIVE</code></sub></h3>
-<p>Our own model, learning where every request is worth sending. <b>Nex 1</b> is the piece that ships: send <code>auto</code> and it picks the tier, today, on every plan. The model it is named for is still in training, and this page says which is which rather than letting one borrow the other's credibility.</p>
-<a href="https://www.lobstack.ai/nex"><b>Read the plan →</b></a>
-</td>
-</tr>
-</table>
+A desktop app for Windows, macOS and Linux. You message a bot like a colleague,
+and it does the job in your real tools.
+
+- **It asks first.** Steps that only read run straight through. Writing a file,
+  running a command or pushing code waits for you to press Approve.
+- **It works where you work.** Your repos, your files, and the services you
+  connect with one-click sign-in. It can search and read the web.
+- **It hands you the finished thing.** Bots can write Word and PDF documents,
+  with real charts, and keep them in your Library.
+- **It keeps working.** Routines run on a schedule while the app is open.
+
+**Free to download.** Your first sign-in from the app adds $5 of credit for 30
+days, with no card. After that it runs on the Free plan, or on a paid plan.
+The app uses the Lobstack API by default; GitHub Copilot or your own provider
+key also work.
+
+It is a public beta. It is not code-signed yet, so Windows warns once on the
+first run and macOS needs a right-click → Open the first time.
+
+[**Download →**](https://www.lobstack.ai/download)
 
 <br>
 
----
+## The Lobstack API
 
-<br>
+One OpenAI-compatible endpoint for 26 models from 9 providers. Keep the OpenAI
+SDK you already use and change the base URL and the key:
 
-<div align="center"><h2>The receipt</h2></div>
+```
+https://www.lobstack.ai/api/gateway/v1
+```
 
-Most gateways route. The question worth asking is what comes back when the router
-picks for you. On Lobstack it is this, on every response — headers on a buffered
-call, and on the final SSE frame under `x_lobstack` when you stream:
+Send `model: "auto"` and Nex, the router inside the API, scores the request and
+serves it from the cheapest tier that can answer it, never above your plan's
+ceiling. A model you name is a ceiling too, not a command.
+
+Every call comes back with a receipt: in response headers on a normal call, and
+on the final stream frame under `x_lobstack` when you stream.
 
 ```json
 {
@@ -77,6 +71,7 @@ call, and on the final SSE frame under `x_lobstack` when you stream:
   "served_model": "gemini-3.8-flash",
   "requested_model": "claude-opus-5",
   "routed": true,
+  "priced": true,
   "cost_usd": 0.003281,
   "savings_usd": 0.018594,
   "baseline_model": "claude-opus-5",
@@ -85,17 +80,22 @@ call, and on the final SSE frame under `x_lobstack` when you stream:
 }
 ```
 
-Two rules hold that together, and they are why the number is worth reading.
+Two rules keep that number honest:
 
-> **`cost_usd` is `null`, never `0`, when the price is unknown.**
-> A model the registry does not carry, or a stream that ended before it could be
-> metered, records an absence. Zero is a claim — that the call was free — and it
-> is the wrong one.
+- **`cost_usd` is `null`, never `0`, when the price is unknown.** Zero would say
+  the call was free.
+- **A saving always says what it was measured against.** `named` means you asked
+  for a model and a cheaper one served it. `plan_ceiling` means you sent `auto`
+  and the comparison is the priciest model your plan allows.
 
-> **A saving never travels without the reason it exists.**
-> `baseline_reason` says what the comparison was measured against: `named` when
-> you asked for a specific model and routing chose a cheaper one, and a saving is
-> only reported when there is a real baseline to subtract from.
+[**The API →**](https://www.lobstack.ai/api-platform) · [Every model and its rate](https://www.lobstack.ai/models) · [Quickstart](https://www.lobstack.ai/docs/quickstart)
+
+<br>
+
+## The Console
+
+The Console is your account: API keys, usage, logs, clients and webhooks, with
+what every call cost. [Open it →](https://www.lobstack.ai/dashboard)
 
 <br>
 
@@ -103,19 +103,16 @@ Two rules hold that together, and they are why the number is worth reading.
 
 <br>
 
-<div align="center"><h2>Open source</h2></div>
+## For developers
 
-Three repositories, all MIT, all on npm.
+Three public repositories, all MIT, all on npm. None is needed to call the API;
+the OpenAI SDK works as it is.
 
 | | What it is |
 |---|---|
-| **[lobstack-cli](https://github.com/Lobstack-ai/lobstack-cli)**<br><sub>`lobstack`</sub> | The Gateway from your terminal. `chat` streams the answer to stdout and the receipt to stderr, so a redirect gives you the answer alone. `proxy` binds a local OpenAI-compatible endpoint, so Cursor, Aider or Continue route and meter through Lobstack without ever holding your key. Zero dependencies. |
-| **[lobstack-mcp](https://github.com/Lobstack-ai/lobstack-mcp)**<br><sub>`@lobstack-ai/mcp`</sub> | An MCP server for Claude Desktop, Claude Code, Cursor, Zed, or anything else that speaks the protocol over stdio. Route preview needs no credential at all, so an agent can ask where a prompt would go and what it would cost before you have an account. |
-| **[lobstack-gateway](https://github.com/Lobstack-ai/lobstack-gateway)**<br><sub>`@lobstack-ai/gateway`</sub> | A typed SDK and, more usefully, the published contract it speaks — `spec/openapi.yaml` for the endpoints and their error classes, `spec/x_lobstack.schema.json` for the receipt. A receipt nobody can validate is a quirk; a receipt with a schema is a contract. |
-
-Versions are read out of the registry by the site rather than typed here, because
-a version number in a README is a number that goes stale silently:
-[lobstack.ai/docs/cli](https://www.lobstack.ai/docs/cli).
+| **[lobstack-gateway](https://github.com/Lobstack-ai/lobstack-gateway)**<br><sub>`@lobstack-ai/gateway`</sub> | A typed TypeScript client for the Lobstack API, plus the published contract: `spec/openapi.yaml` for the endpoints and errors, `spec/x_lobstack.schema.json` for the receipt. |
+| **[lobstack-cli](https://github.com/Lobstack-ai/lobstack-cli)**<br><sub>`lobstack`</sub> | The Lobstack API from your terminal. `chat` streams the answer to stdout and the receipt to stderr. `proxy` runs a local OpenAI-compatible endpoint, so Cursor, Aider or Continue go through Lobstack without holding your key. No dependencies. |
+| **[lobstack-mcp](https://github.com/Lobstack-ai/lobstack-mcp)**<br><sub>`@lobstack-ai/mcp`</sub> | An MCP server for Claude Desktop, Claude Code, Cursor, Zed, or anything that speaks MCP over stdio. Route preview needs no key, so an agent can ask where a prompt would go and what it would cost before you have an account. |
 
 <br>
 
@@ -123,22 +120,15 @@ a version number in a README is a number that goes stale silently:
 
 <br>
 
-<div align="center"><h2>What is not claimed here</h2></div>
+## What we do not claim
 
-Lobstack is early, and the pages that would normally hide that instead say so.
-
-- The [status page](https://www.lobstack.ai/status) computes availability from real
-  request traffic rather than synthetic probes, and reports **no data** where there
-  is not enough of it to report anything else.
-- The model catalogue carries the date every price was last checked against the
-  provider's own page, and flags any rate that could not be confirmed.
-- SOC 2 Type II controls are mapped with audit-ready documentation. **No audit has
-  been performed and the certification is not claimed** —
-  [security](https://www.lobstack.ai/docs/security) states which controls run and
-  which are written down and not deployed.
-- [Compare](https://www.lobstack.ai/compare) grades the competition on four questions
-  and does not put Lobstack in the table, because a vendor scoring itself in its own
-  matrix always wins and everyone reading knows it.
+- Lobstack holds **no SOC 2 or other audited certification**.
+  [Security](https://www.lobstack.ai/docs/security) says what runs today and what
+  is only written down.
+- The [status page](https://www.lobstack.ai/status) is computed from real request
+  traffic, not synthetic checks. We publish no uptime figure outside a contract.
+- Every price in the [model list](https://www.lobstack.ai/models) carries the date
+  it was last checked against the provider's own page.
 
 <br>
 
@@ -150,19 +140,18 @@ Lobstack is early, and the pages that would normally hide that instead say so.
 
 **hello@lobstack.ai**
 
-Issues on the three public repositories are read. If a Gateway call went wrong,
-include the `x-lobstack-request-id` from the response — every request carries one,
-allocated before anything can fail, so even a 401 comes back with an id worth quoting.
+Issues on the three public repositories are read. If an API call went wrong,
+include the `x-lobstack-request-id` from the response. Every request gets one,
+even a 401.
 
 <br>
 
 [Website](https://www.lobstack.ai) ·
+[Download](https://www.lobstack.ai/download) ·
+[API](https://www.lobstack.ai/api-platform) ·
 [Docs](https://www.lobstack.ai/docs) ·
-[Gateway API](https://www.lobstack.ai/docs/gateway) ·
-[Routing](https://www.lobstack.ai/gateway/routing) ·
-[Connectors](https://www.lobstack.ai/connectors) ·
 [Pricing](https://www.lobstack.ai/pricing) ·
-[News](https://www.lobstack.ai/news) ·
+[Status](https://www.lobstack.ai/status) ·
 [About](https://www.lobstack.ai/about)
 
 </div>
