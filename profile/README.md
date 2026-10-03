@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://www.lobstack.ai/download">
-  <img src="https://raw.githubusercontent.com/Lobstack-ai/.github/main/profile/assets/lobstack.jpg" alt="Lobstack: Asks before it acts. An AI team on your computer, free for Windows, Mac and Linux. Beside it, the Lobstack app holding a file change for approval." width="900">
+  <img src="https://raw.githubusercontent.com/Lobstack-ai/.github/main/profile/assets/lobstack.jpg" alt="Lobstack: Asks before it acts. An AI team on your computer, free for Windows, Mac and Linux. Beside it, the Lobstack app holding a dependency change for approval." width="900">
 </a>
 
 <br>
@@ -33,17 +33,21 @@ and it does the job in your real tools.
   running a command or pushing code waits for you to press Approve.
 - **It works where you work.** Your repos, your files, and the services you
   connect with one-click sign-in. It can search and read the web.
-- **It hands you the finished thing.** Bots can write Word and PDF documents,
-  with real charts, and keep them in your Library.
-- **It keeps working.** Routines run on a schedule while the app is open.
+- **It hands you the finished thing.** Documents, slide decks, spreadsheets,
+  designs and small apps open in a canvas beside the chat, and stay in your
+  Library.
+- **It keeps working.** Hand it a whole job and it plans first, then works in
+  the background. Routines and triggers run while the app is running.
 
 **Free to download.** Your first sign-in from the app adds $5 of credit for 30
-days, with no card. After that it runs on the Free plan, or on a paid plan.
+days, with no card. After that, the Free plan gives $1 of credit every week,
+or you choose a paid plan.
 The app uses the Lobstack API by default; GitHub Copilot or your own provider
 key also work.
 
-It is a public beta. It is not code-signed yet, so Windows warns once on the
-first run and macOS needs a right-click → Open the first time.
+It is a public beta and not code-signed yet. Windows warns once on the first
+run (More info → Run anyway). On macOS 15, press Done, then open System
+Settings → Privacy & Security and press Open Anyway.
 
 [**Download →**](https://www.lobstack.ai/download)
 
@@ -51,8 +55,9 @@ first run and macOS needs a right-click → Open the first time.
 
 ## The Lobstack API
 
-One OpenAI-compatible endpoint for 26 models from 9 providers. Keep the OpenAI
-SDK you already use and change the base URL and the key:
+One OpenAI-compatible endpoint and one key for models from five providers:
+Anthropic, OpenAI, Google, xAI and DeepSeek. Keep the OpenAI SDK you already
+use and change the base URL and the key:
 
 ```
 https://www.lobstack.ai/api/gateway/v1
